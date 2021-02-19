@@ -1,1 +1,38 @@
+body {
+	background-color: rgba(255, 210, 127, 0.822);
+	color: rgb(59, 24, 0);
+}
 
+a {
+	text-decoration: none;
+	color: rgb(134, 91, 62);
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 30px;
+}
+
+img {
+	margin-left: 100px;
+	margin-top: 60px;
+	width: 250px;
+}
+
+h1 {
+	position: absolute;
+	left: 700px;
+	top: 50px;
+}
+
+.information {
+	position: absolute;
+	left: 500px;
+	top: 120px;
+	width: 500px;
+}
+
+li {
+	font-size: 35px;
+}
