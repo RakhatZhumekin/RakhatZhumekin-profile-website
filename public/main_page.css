@@ -1,1 +1,23 @@
+body {
+	background-color: rgba(255, 210, 127, 0.822);
+	color: rgb(59, 24, 0);
+}
 
+a {
+	text-decoration: none;
+	color: rgb(134, 91, 62);
+}
+
+h1 {
+	text-align: center;
+}
+
+#hello {
+	margin-top: 250px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 30px;
+}
