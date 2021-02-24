@@ -29,4 +29,4 @@ Route::get('/post/{id}', function($id)
 {  
   return "id number is : ". $id;   
 }  
-); 
+);
