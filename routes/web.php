@@ -40,3 +40,9 @@ Route::get('/post', function() {
 }) -> name('post');
 
 Route::get('/blog', [BlogController::class, 'index']);
+
+Route::get('/blog/create', function() {
+    return view('blog.create');
+});
+
+Route::post('/blog/create', [BlogController::class, 'store'])-> name('add-post');
