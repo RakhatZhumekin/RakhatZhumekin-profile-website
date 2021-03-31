@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Http\Controllers\BlogController;
 use App\Models\Profile;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,3 +59,5 @@ Route::get('/profiles/create', function() {
 });
 
 Route::post('/profiles/create', [ProfileController::class, 'store'])-> name('add-profile');
+
+Route::get('mail/send', [MailController::class, 'send']);
