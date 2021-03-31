@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use App\Models\Profile;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +50,11 @@ Route::get('/blog/create', function() {
 Route::post('/blog/create', [BlogController::class, 'store'])-> name('add-post');
 
 Route::get('/post/{id}', [BlogController::class, 'get_post']);
+
+Route::get('/profiles', [ProfileController::class, 'index']);
+
+Route::get('/profiles/create', function() {
+    return view('profiles.create_profile');
+});
+
+Route::post('/profiles/create', [ProfileController::class, 'store'])-> name('add-profile');
