@@ -24,15 +24,15 @@ class ProfileController extends Controller
                 $validated = $request->validate([
                     'photo' => 'mimes:jpeg,png',
                 ]);
-                $extension = $request->photo->getClientOriginalExtension();
-                $fileName = $request->photo->getClientOriginalName();
-                $request->file('photo')->storeAs('/images', $fileName);
-                $url = Storage::url($fileName);
+                $file = $request->file('photo');
+                $path = 'images';
+                $file->move($path, $file->getClientOriginalName());
+                $path = '/images/'.$file->getClientOriginalName();
                 $profile = Profile::create([
                     'name' => $request->name,
                     'surname' => $request->surname,
                     'email' => $request->email,
-                    'photo' => $url
+                    'photo' => $path
                 ]);
                 return back();
             }

@@ -13,7 +13,7 @@
                 <td>{{$profile->name}}</td>
                 <td>{{$profile->surname}}</td>
                 <td>{{$profile->email}}</td>
-                <td>{{$profile->photo}}"</td>
+                <td><img src="{{$profile->photo}}" width="100px"></td>
             </tr>
         </table>
     @empty
