@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Models\Profile;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\LangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,15 +19,22 @@ use App\Http\Controllers\MailController;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('main_page');
+// }) ->name('main_page');
+
+Route::get('/main/{lang}', function ($lang) {
+    App::setlocale($lang);
     return view('main_page');
 }) ->name('main_page');
 
-Route::get('/about', function() {
+Route::get('/about/{lang}', function($lang) {
+    App::setlocale($lang);
     return view('about');
 }) ->name('about');
 
-Route::get('/contacts', function() {
+Route::get('/contacts/{lang}', function($lang) {
+    App::setlocale($lang);
     return view('contacts');
 }) ->name('contacts');
 
